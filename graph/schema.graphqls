@@ -1,0 +1,20 @@
+# GraphQL schema example
+#
+# https://gqlgen.com/getting-started/
+
+
+type Query {
+  products(activeProduct: Boolean, pageNumber: Int = 0, recordCount: Int = 20): [Product!]!
+  product(productID: ID!): Product
+  orders(start: String, end: String, status: Status, pageNumber: Int, recordCount: Int): [Order]!
+  order(orderID: ID!): Order
+  person(personID: ID, phoneNumber: String): Person
+}
+
+
+type Mutation {
+  productSave(product: ProductInput!): Product!
+  orderSave(order: OrderInput): Order
+  personSave(person: PersonInput): Person
+}
+

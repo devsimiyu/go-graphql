@@ -1,0 +1,22 @@
+enum Status {
+    Pending
+    Confirmed
+    Complete
+    Rejected
+}
+
+type Order {
+    OrderID: ID!
+    Person: Person
+    PersonID: ID!
+    Products: [Product]!
+    CreatedDate: String
+    Status: Status
+}
+
+input OrderInput {
+    OrderID: ID
+    PersonID: ID!,
+    Products: [ID!]
+    Status: Status
+}

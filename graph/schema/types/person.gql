@@ -1,0 +1,14 @@
+type Person {
+    PersonID: ID!
+    DisplayName: String!
+    PhoneNumber: String!
+    CreatedDate: String
+    IsActive: Boolean
+}
+
+input PersonInput {
+    PersonID: ID
+    DisplayName: String!
+    PhoneNumber: String!
+    IsActive: Boolean
+}

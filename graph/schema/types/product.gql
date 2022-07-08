@@ -1,0 +1,14 @@
+type Product {
+    ProductID: ID!
+    ProductName: String!
+    Price: Int!
+    Quantity: Int!
+    CreatedDate: String
+}
+
+input ProductInput {
+    ProductID: ID
+    ProductName: String!
+    Price: Int!
+    Quantity: Int!
+}
